@@ -40,8 +40,20 @@ public class Product {
         return vat;
      }
 
-    public void setCode(int code){
-        this.code = code;
+    public void setName(String name){
+        this.name = name;
+    }
+
+    public void setBrand(String brand){
+        this.brand = brand;
+    }
+
+    public void setPrice(double price){
+        this.price = price;
+    }
+
+    public void setVat(double vat){
+        this.vat = vat;
     }
 
 }
