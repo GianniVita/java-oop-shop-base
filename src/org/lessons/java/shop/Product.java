@@ -2,23 +2,27 @@ package org.lessons.java.shop;
 
 
 
-import java.util.Random;
+
 
 public class Product {
 
-    private final int code;
+    private int code;
     private String name;
     private String brand;
     private double price;
     private double vat;
 
-    Product(int code,String name, String brand, double price, double vat) {
-        Random rand = new Random();
-        this.code = rand.nextInt(999999);
+    public Product(int code,String name, String brand, double price, double vat) {
+        
+        this.code = code;
         this.name = name;
         this.brand = brand;
         this.price = price;
         this.vat = vat;
+    }
+
+    public Product(String name, String brand, double price, double vat){
+        this((int)(Math.random()*999999),name,brand,price,vat);
     }
 
     public int getCode(){
